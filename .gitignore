@@ -157,3 +157,7 @@ media/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#backend and frontend static
+/node_modules
+/static_backend
