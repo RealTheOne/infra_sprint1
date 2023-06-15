@@ -1,0 +1,5 @@
+IP: 84.201.164.160
+name_taski: https://yaptaskitheory.ddns.net
+name_kittygram: https://yapkittygramtask.dynv6.net
+login: CustomAdmin
+passwor: zetaLambda008
