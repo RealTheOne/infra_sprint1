@@ -4,13 +4,18 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+server_ip = os.getenv('SERVER_IP')
+local_server = os.getenv('LOCAL_SERVER', default='127.0.0.1')
+local_host = os.getenv('LOCAL_HOST', default='localhost')
+server_name = os.getenv('SERVER_NAME')
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = os.getenv('SECRET_KEY', default='blahblahblah')
 
-DEBUG = False
+DEBUG = os.getenv('DEBUG')
 
-ALLOWED_HOSTS = ['84.201.164.160', '127.0.0.1', 'localhost', 'yapkittygramtask.dynv6.net']
+ALLOWED_HOSTS = [server_ip, local_server, local_host, server_name]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
