@@ -4,18 +4,13 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-server_ip = os.getenv('SERVER_IP')
-local_server = os.getenv('LOCAL_SERVER', default='127.0.0.1')
-local_host = os.getenv('LOCAL_HOST', default='localhost')
-server_name = os.getenv('SERVER_NAME')
-
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY', default='blahblahblah')
 
-DEBUG = os.getenv('DEBUG')
+DEBUG = (os.getenv('DEBUG', 'False') == 'True')
 
-ALLOWED_HOSTS = [server_ip, local_server, local_host, server_name]
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
