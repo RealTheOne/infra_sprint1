@@ -5,9 +5,6 @@ Project infra_sprint1 is a study project to get familiar with deployment of an a
 It is a part of Python-developer course from Yandex-practicum.
 This project allows you to post cards of cats with their photos, date of birth, color and some other info.
 
-## Running project can be seen at:
-https://yapkittygramtask.dynv6.net
-
 
 ## how to deploy
 ### Clone repository and acces it through command line:
